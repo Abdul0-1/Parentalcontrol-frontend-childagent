@@ -26,7 +26,7 @@ export default function Connect() {
     setMessage("");
 
     try {
-      const res = await api.post("/device/pair", {
+      const res = await api.post("/api/device/pair", {
         pairingCode: code.trim().toUpperCase(),
         deviceName: deviceName || "Child Browser Device",
         deviceUuid: getOrCreateUuid(),
